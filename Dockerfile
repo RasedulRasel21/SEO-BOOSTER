@@ -1,10 +1,13 @@
-FROM node:20-alpine
+FROM node:20-slim
+
+# Install OpenSSL and other required dependencies
+RUN apt-get update -y && apt-get install -y openssl ca-certificates && rm -rf /var/lib/apt/lists/*
 
 WORKDIR /app
 
-# Install dependencies
+# Install dependencies (including dev dependencies for build)
 COPY package*.json ./
-RUN npm ci --omit=dev
+RUN npm ci
 
 # Copy prisma schema and generate client
 COPY prisma ./prisma
@@ -15,6 +18,9 @@ COPY . .
 
 # Build the application
 RUN npm run build
+
+# Remove dev dependencies after build
+RUN npm prune --production
 
 # Expose port
 EXPOSE 3000
