@@ -1,0 +1,28 @@
+# Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
+
+client_id = "ab82f122718af01befbc08e3e96cc8c1"
+name = "SEO Booster - AI SEO and Blog Post"
+handle = "seo-booster-ai"
+application_url = "https://your-app-url.ondigitalocean.app"
+embedded = true
+
+[access_scopes]
+# Learn more at https://shopify.dev/docs/apps/tools/cli/configuration#access_scopes
+scopes = "read_products,write_products,read_content,write_content,read_themes,write_themes,read_metaobjects,write_metaobjects,read_files,write_files"
+
+[auth]
+redirect_urls = [
+  "https://your-app-url.ondigitalocean.app/auth/callback",
+  "https://your-app-url.ondigitalocean.app/auth/shopify/callback",
+  "https://your-app-url.ondigitalocean.app/api/auth/callback"
+]
+
+[webhooks]
+api_version = "2024-10"
+
+[pos]
+embedded = false
+
+[build]
+automatically_update_urls_on_dev = true
+dev_store_url = ""
