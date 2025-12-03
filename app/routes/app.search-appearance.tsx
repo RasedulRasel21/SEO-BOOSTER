@@ -27,7 +27,7 @@ import {
 import { useState, useCallback } from "react";
 import { authenticate } from "../shopify.server";
 import prisma from "../db.server";
-import { generateMetaTags, generateAltText } from "../services/openai.server";
+import { generateMetaTags, generateAltText } from "../services/groq.server";
 import {
   generateProductStructuredData,
   generateOrganizationStructuredData,

@@ -25,7 +25,7 @@ import {
 import { useState, useCallback } from "react";
 import { authenticate } from "../shopify.server";
 import prisma from "../db.server";
-import { generateKeywordSuggestions } from "../services/openai.server";
+import { generateKeywordSuggestions } from "../services/groq.server";
 
 export const loader = async ({ request }: LoaderFunctionArgs) => {
   const { admin, session } = await authenticate.admin(request);
