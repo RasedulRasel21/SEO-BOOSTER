@@ -3,7 +3,7 @@
 client_id = "ab82f122718af01befbc08e3e96cc8c1"
 name = "SEO Booster - AI SEO and Blog Post"
 handle = "seo-booster-ai"
-application_url = "https://your-app-url.ondigitalocean.app"
+application_url = "https://urchin-app-p3gwr.ondigitalocean.app"
 embedded = true
 
 [access_scopes]
@@ -12,9 +12,9 @@ scopes = "read_products,write_products,read_content,write_content,read_themes,wr
 
 [auth]
 redirect_urls = [
-  "https://your-app-url.ondigitalocean.app/auth/callback",
-  "https://your-app-url.ondigitalocean.app/auth/shopify/callback",
-  "https://your-app-url.ondigitalocean.app/api/auth/callback"
+  "https://urchin-app-p3gwr.ondigitalocean.app/auth/callback",
+  "https://urchin-app-p3gwr.ondigitalocean.app/auth/shopify/callback",
+  "https://urchin-app-p3gwr.ondigitalocean.app/api/auth/callback"
 ]
 
 [webhooks]
